@@ -57,7 +57,8 @@ class Mo extends Component {
   }
 
   marcarVolta(){
-    var txtDoCronometro = "Nº:"+ this.state.count + "                             " + this.formatar(this.state.horas) + ":" + this.formatar(this.state.minutos) + ":" + this.formatar(this.state.segundos) + "\n";
+    var txtDoCronometro = "Nº:"+ this.state.count + "                             " +
+     this.formatar(this.state.horas) + ":" + this.formatar(this.state.minutos) + ":" + this.formatar(this.state.segundos) + "\n";
     this.state.voltas.push(txtDoCronometro);
  
     this.setState({
@@ -78,7 +79,7 @@ class Mo extends Component {
 
     if(this.state.voltas.length>0){
       this.state.voltas.push('-------\n');
-    }
+    } 
   }
 
   render()
@@ -109,7 +110,7 @@ class Mo extends Component {
          </View>
         </View>
         <View style={styles.volta}>
-          <Text>{ this.state.voltas}</Text>
+          <Text>{this.state.voltas}</Text>
         </View> 
       </ScrollView>
     )
